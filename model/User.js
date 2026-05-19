@@ -4,15 +4,12 @@ const { type } = require("node:os");
 const userschema = new mongoose.Schema({
     name:{
         type:String,
-       
-    },
-    age:{
-        type:Number,
-     
     }, 
     email:{
         type:String,
-      
+    },
+    password:{
+        type:String,
     }
 })
 
