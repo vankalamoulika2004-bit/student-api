@@ -1,0 +1,5 @@
+PORT=4000
+
+MONGO_URL=mongodb+srv://vankalamoulika2004_db_user:aitam@cluster0.kjqce2g.mongodb.net/mydb?retryWrites=true&w=majority
+
+JWT_SECRET=secretkey
