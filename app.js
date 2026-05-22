@@ -2,26 +2,31 @@ const express = require("express");
 const dotenv = require("dotenv");
 
 const connectDB = require("./config/db");
+
 const userRoutes = require("./routes/userRoutes");
-const dns = require("dns");
-dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
-// Load .env
-dotenv.config();
-
-// Initialize Express
 const app = express();
 
-// Middleware
-app.use(express.json());
 
-// Database Connection
+// ENV
+dotenv.config();
+
+
+// DATABASE
 connectDB();
 
-// Routes
+
+// MIDDLEWARE
+app.use(express.json());
+
+
+// ROUTES
 app.use("/", userRoutes);
 
-// Server
+
+// SERVER
 app.listen(process.env.PORT, () => {
-    console.log(`Server Started on Port ${process.env.PORT}`);
+
+  console.log("Server Started");
+
 });
